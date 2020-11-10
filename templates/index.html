@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="/static/index_style.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/index_JS.js"></script>
+</head>
+<body>
+	<video src="/static/bg.mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
+	<div class="search" >
+		<input type="text" placeholder="请输入..." id="nn"/>
+		<button onclick="button_click()"><i>搜索</i></button>
+	</div>
+	
+	<div class="box">
+		<div style="width:50%;float: left;">
+			<h3>巅峰榜：</h3>
+			<ol>
+				<li><a href="javascript:clickM(62,'飙升榜')" rel="content">飙升榜</a></li>
+				<li><a href="javascript:clickM(26,'热歌榜')" rel="content">热歌榜</a></li>
+				<li><a href="javascript:clickM(27,'新歌榜')" rel="content">新歌榜</a></li>
+				<li><a href="javascript:clickM(4,'流行指数榜')" rel="content">流行指数榜</a></li>
+				<li><a href="javascript:clickM(67,'听歌识曲榜')" rel="content">听歌识曲榜</a></li>
+			</ol>
+			<h3>特色榜：</h3>
+			<ol>
+				<li><a href="javascript:clickM(28,'网络歌曲榜')" rel="content">网络歌曲榜</a></li>
+				<li><a href="javascript:clickM(63,'DJ舞曲榜')" rel="content">DJ舞曲榜</a></li>
+				<li><a href="javascript:clickM(74,'Q音快手榜')" rel="content">Q音快手榜</a></li>
+				<li><a href="javascript:clickM(60,'抖音排行榜')" rel="content">抖音排行榜</a></li>
+				<li><a href="javascript:clickM(64,'综艺新歌榜')" rel="content">综艺新歌榜</a></li>
+				<li><a href="javascript:clickM(29,'影视金曲榜')" rel="content">影视金曲榜</a></li>
+				<li><a href="javascript:clickM(65,'国风热歌榜')" rel="content">国风热歌榜</a></li>
+				<li><a href="javascript:clickM(58,'说唱榜')" rel="content">说唱榜</a></li>
+				<li><a href="javascript:clickM(57,'电音榜')" rel="content">电音榜</a></li>
+				<li><a href="javascript:clickM(72,'动漫音乐榜')" rel="content">动漫音乐榜</a></li>
+				<li><a href="javascript:clickM(73,'游戏音乐榜')" rel="content">游戏音乐榜</a></li>
+				<li><a href="javascript:clickM(70,'达人音乐榜')" rel="content">达人音乐榜</a></li>
+				<li><a href="javascript:clickM(36,'K歌金曲榜')" rel="content">K歌金曲榜</a></li>
+				<li><a href="javascript:clickM(52,'腾讯音乐人原创榜')" rel="content">腾讯音乐人原创榜</a></li>
+			</ol>
+
+		</div>
+		<div style="width:50%;float: left;">
+			<h3>地区榜：</h3>
+			<ol>
+				<li><a href="javascript:clickM(5,'内地榜')" rel="content">内地榜</a></li>
+				<li><a href="javascript:clickM(59,'香港地区榜')" rel="content">香港地区榜</a></li>
+				<li><a href="javascript:clickM(61,'台湾地区榜')" rel="content">台湾地区榜</a></li>
+				<li><a href="javascript:clickM(3,'欧美榜')" rel="content">欧美榜</a></li>
+				<li><a href="javascript:clickM(16,'韩国榜')" rel="content">韩国榜</a></li>
+				<li><a href="javascript:clickM(17,'日本榜')" rel="content">日本榜</a></li>
+			</ol>
+			<h3>全球榜：</h3>
+			<ol>
+				<li><a href="javascript:clickM(108,'美国公告牌榜')" rel="content">美国公告牌榜</a></li>
+				<li><a href="javascript:clickM(123,'美国iTunes榜<')" rel="content">美国iTunes榜</a></li>
+				<li><a href="javascript:clickM(129,'韩国Melon榜')" rel="content">韩国Melon榜</a></li>
+				<li><a href="javascript:clickM(107,'英国UK榜')" rel="content">英国UK榜</a></li>
+				<li><a href="javascript:clickM(105,'日本公信榜')" rel="content">日本公信榜</a></li>
+				<li><a href="javascript:clickM(126,'JOOX本地热播榜')" rel="content">JOOX本地热播榜</a></li>
+				<li><a href="javascript:clickM(114,'香港商台榜')" rel="content">香港商台榜</a></li>
+				<li><a href="javascript:clickM(127,'台湾KKBOX榜')" rel="content">台湾KKBOX榜</a></li>
+				<li><a href="javascript:clickM(128,'YouTube音乐排行榜')" rel="content">YouTube音乐排行榜</a></li>
+			</ol>
+
+		</div>
+	</div>
+	<div class="box" id="fbox">
+		<audio id="media" src="" autoplay="autoplay" onended="playMusic(1,0)" ontimeupdate="timeupdate()"></audio>
+		<div style="float:left;">
+			<br>
+			<p id="Title" style="font-size: 1.17em;text-align:center">&nbsp;</p>
+			<p id="musicTitle"></p>
+			<p id="currTime">当前：00:00:00</p>
+			<p id="totalTime">时长：00:00:00</p>
+			<input id="playMusic" type="button" value="暂停" onclick="stopmusic()"/>
+
+			<ul id="box"></ul>
+		</div>
+	</div>
+	<ul id="text"></ul>
+
+</body>
+</html>
